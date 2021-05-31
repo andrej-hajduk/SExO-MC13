@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>(global) - byond</title>
+</head>
+<body>
+<header>
+    <a href="index.html">byond</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="global.html#proc">Proc Details</a></header>
+<main>
+<h1>(global)
+        
+    
+            <a href="https://github.com/SExOMC13/SExO-MC13/blob/3dc84d60f200616e861e18a22717ca0dae88d56f/(unknown)">
+        <img src="git.png" width="16" height="16" title="(unknown)"/></a></h1>
+
+<table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="global.html#proc/LeftAndRightOfDir">LeftAndRightOfDir</a></th><td>Returns the left and right dir of the input dir, used for AI stutter step while attacking</td></tr>
+            <tr><th><a href="global.html#proc/can_see">can_see</a></th><td>Step-towards method of determining whether one atom can see another. Similar to viewers()</td></tr>
+            <tr><th><a href="global.html#proc/cheap_get_humans_near">cheap_get_humans_near</a></th><td>Returns a list of humans via get_dist and same z level method, very cheap compared to range()</td></tr>
+            <tr><th><a href="global.html#proc/deadchat_broadcast">deadchat_broadcast</a></th><td>Displays a message in deadchat, sent by source. Source is not linkified, message is, to avoid stuff like character names to be linkified.
+Automatically gives the class deadsay to the whole message (message + source)</td></tr>
+            <tr><th><a href="global.html#proc/emissive_appearance">emissive_appearance</a></th><td>Produces a mutable appearance glued to the <a href="code/__DEFINES/layers.html#define/EMISSIVE_PLANE" title="EMISSIVE_PLANE">EMISSIVE_PLANE</a> dyed to be the <a href="code/__DEFINES/lighting.html#define/EMISSIVE_COLOR" title="EMISSIVE_COLOR">EMISSIVE_COLOR</a>.</td></tr>
+            <tr><th><a href="global.html#proc/generate_asset_name">generate_asset_name</a></th><td>Generate a filename for this asset
+The same asset will always lead to the same asset name
+(Generated names do not include file extention.)</td></tr>
+            <tr><th><a href="global.html#proc/generate_cone">generate_cone</a></th><td>Generates a cone shape. Any other checks should be handled with the resulting list. Can work with up to 359 degrees
+Variables:
+center - where the cone begins, or center of a circle drawn with this
+max_row_count - how many rows are checked
+starting_row - from how far should the turfs start getting included in the cone
+cone_width - big the angle of the cone is
+cone_direction - at what angle should the cone be made, relative to the game board's orientation
+blocked - whether the cone should take into consideration solid walls</td></tr>
+            <tr><th><a href="global.html#proc/get_areas">get_areas</a></th><td>Takes: Area type as text string or as typepath OR an instance of the area. Returns: A list of all areas of that type in the world.</td></tr>
+            <tr><th><a href="global.html#proc/get_bbox_of_atoms">get_bbox_of_atoms</a></th><td>Get a bounding box of a list of atoms.</td></tr>
+            <tr><th><a href="global.html#proc/getpois">getpois</a></th><td>Returns a list of all items of interest with their name</td></tr>
+            <tr><th><a href="global.html#proc/getviewsize">getviewsize</a></th><td>the 3 directions in the direction on the cone that will be checked
+turfs that are checked whether the cone can continue further from them</td></tr>
+            <tr><th><a href="global.html#proc/jatum_deserialize">jatum_deserialize</a></th><td>Attempt to create a value from a JATUN JSON.</td></tr>
+            <tr><th><a href="global.html#proc/jatum_serialize">jatum_serialize</a></th><td>Attempt to serialize a given value to the JATUM format.</td></tr>
+            <tr><th><a href="global.html#proc/log_tgui">log_tgui</a></th><td>Appends a tgui-related log entry. All arguments are optional.</td></tr>
+            <tr><th><a href="global.html#proc/make_datum_references_lists">make_datum_references_lists</a></th><td>Initial Building</td></tr>
+            <tr><th><a href="global.html#proc/md5asfile">md5asfile</a></th><td>Save file as an external file then md5 it.
+Used because md5ing files stored in the rsc sometimes gives incorrect md5 results.</td></tr>
+            <tr><th><a href="global.html#proc/md5filepath">md5filepath</a></th><td>Returns the md5 of a file at a given path.</td></tr>
+            <tr><th><a href="global.html#proc/sanitize_is_full_emote_list">sanitize_is_full_emote_list</a></th><td>Sanitize the custom emote list</td></tr>
+            <tr><th><a href="global.html#proc/send2adminchat">send2adminchat</a></th><td>Sends a message to TGS admin chat channels.</td></tr>
+            <tr><th><a href="global.html#proc/send2chat">send2chat</a></th><td>Sends a message to TGS chat channels.</td></tr>
+            <tr><th><a href="global.html#proc/url2htmlloader">url2htmlloader</a></th><td>Return html to load a url.
+for use inside of browse() calls to html assets that might be loaded on a cdn.</td></tr></table><h2 id="proc">Proc Details</h2><h3 id="proc/LeftAndRightOfDir"><aside class="declaration">proc </aside>LeftAndRightOfDir<aside>(direction, diagonal_check) 
+        
+    
+            <a href="https://github.com/SExOMC13/SExO-MC13/blob/3dc84d60f200616e861e18a22717ca0dae88d56f/code/__HELPERS/unsorted.dm#L1061">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;unsorted.dm 1061"/></a></aside>
+        </h3>
+        <p>Returns the left and right dir of the input dir, used for AI stutter step while attacking</p><h3 id="proc/can_see"><aside class="declaration">proc </aside>can_see<aside>(/<a href="atom.html">atom</a>/source, /<a href="atom.html">atom</a>/target, length) 
+        
+    
+            <a href="https://github.com/SExOMC13/SExO-MC13/blob/3dc84d60f200616e861e18a22717ca0dae88d56f/code/__HELPERS/unsorted.dm#L521">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;unsorted.dm 521"/></a></aside>
+        </h3>
+        <p>Step-towards method of determining whether one atom can see another. Similar to viewers()</p><h3 id="proc/cheap_get_humans_near"><aside class="declaration">proc </aside>cheap_get_humans_near<aside>(/<a href="atom.html">atom</a>/<a href="atom/movable.html">movable</a>/source, distance) 
+        
+    
+            <a href="https://github.com/SExOMC13/SExO-MC13/blob/3dc84d60f200616e861e18a22717ca0dae88d56f/code/__HELPERS/ai.dm#L13">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;ai.dm 13"/></a></aside>
+        </h3>
+        <p>Returns a list of humans via get_dist and same z level method, very cheap compared to range()</p><h3 id="proc/deadchat_broadcast"><aside class="declaration">proc </aside>deadchat_broadcast<aside>(message, source, /mob/follow_target, /turf/turf_target, speaker_key, message_type) 
+        
+    
+            <a href="https://github.com/SExOMC13/SExO-MC13/blob/3dc84d60f200616e861e18a22717ca0dae88d56f/code/__HELPERS/mobs.dm#L181">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;mobs.dm 181"/></a></aside>
+        </h3>
+        <p>Displays a message in deadchat, sent by source. Source is not linkified, message is, to avoid stuff like character names to be linkified.
+Automatically gives the class deadsay to the whole message (message + source)</p><h3 id="proc/emissive_appearance"><aside class="declaration">proc </aside>emissive_appearance<aside>(icon, icon_state, layer, alpha, appearance_flags) 
+        
+    
+            <a href="https://github.com/SExOMC13/SExO-MC13/blob/3dc84d60f200616e861e18a22717ca0dae88d56f/code/__HELPERS/lighting.dm#L2">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;lighting.dm 2"/></a></aside>
+        </h3>
+        <p>Produces a mutable appearance glued to the <a href="code/__DEFINES/layers.html#define/EMISSIVE_PLANE" title="EMISSIVE_PLANE">EMISSIVE_PLANE</a> dyed to be the <a href="code/__DEFINES/lighting.html#define/EMISSIVE_COLOR" title="EMISSIVE_COLOR">EMISSIVE_COLOR</a>.</p><h3 id="proc/generate_asset_name"><aside class="declaration">proc </aside>generate_asset_name<aside>(file) 
+        
+    
+            <a href="https://github.com/SExOMC13/SExO-MC13/blob/3dc84d60f200616e861e18a22717ca0dae88d56f/code/__HELPERS/icons.dm#L941">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;icons.dm 941"/></a></aside>
+        </h3>
+        <p>Generate a filename for this asset
+The same asset will always lead to the same asset name
+(Generated names do not include file extention.)</p><h3 id="proc/generate_cone"><aside class="declaration">proc </aside>generate_cone<aside>(/<a href="atom.html">atom</a>/center, max_row_count, starting_row, cone_width, cone_direction, blocked) 
+        
+    
+            <a href="https://github.com/SExOMC13/SExO-MC13/blob/3dc84d60f200616e861e18a22717ca0dae88d56f/code/__HELPERS/unsorted.dm#L1108">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;unsorted.dm 1108"/></a></aside>
+        </h3>
+        <p>Generates a cone shape. Any other checks should be handled with the resulting list. Can work with up to 359 degrees
+Variables:
+center - where the cone begins, or center of a circle drawn with this
+max_row_count - how many rows are checked
+starting_row - from how far should the turfs start getting included in the cone
+cone_width - big the angle of the cone is
+cone_direction - at what angle should the cone be made, relative to the game board's orientation
+blocked - whether the cone should take into consideration solid walls</p><h3 id="proc/get_areas"><aside class="declaration">proc </aside>get_areas<aside>(areatype, subtypes) 
+        
+    
+            <a href="https://github.com/SExOMC13/SExO-MC13/blob/3dc84d60f200616e861e18a22717ca0dae88d56f/code/__HELPERS/unsorted.dm#L1075">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;unsorted.dm 1075"/></a></aside>
+        </h3>
+        <p>Takes: Area type as text string or as typepath OR an instance of the area. Returns: A list of all areas of that type in the world.</p><h3 id="proc/get_bbox_of_atoms"><aside class="declaration">proc </aside>get_bbox_of_atoms<aside>(/list/atoms) 
+        
+    
+            <a href="https://github.com/SExOMC13/SExO-MC13/blob/3dc84d60f200616e861e18a22717ca0dae88d56f/code/__HELPERS/game.dm#L31">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;game.dm 31"/></a></aside>
+        </h3>
+        <p>Get a bounding box of a list of atoms.</p>
+<p>Arguments:</p>
+<ul>
+<li>atoms - List of atoms. Can accept output of view() and range() procs.</li>
+</ul>
+<p>Returns: list(x1, y1, x2, y2)</p><h3 id="proc/getpois"><aside class="declaration">proc </aside>getpois<aside>(mobs_only, skip_mindless, specify_dead_role) 
+        
+    
+            <a href="https://github.com/SExOMC13/SExO-MC13/blob/3dc84d60f200616e861e18a22717ca0dae88d56f/code/__HELPERS/unsorted.dm#L1037">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;unsorted.dm 1037"/></a></aside>
+        </h3>
+        <p>Returns a list of all items of interest with their name</p><h3 id="proc/getviewsize"><aside class="declaration">proc </aside>getviewsize<aside>(view) 
+        
+    
+            <a href="https://github.com/SExOMC13/SExO-MC13/blob/3dc84d60f200616e861e18a22717ca0dae88d56f/code/__HELPERS/view.dm#L1">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;view.dm 1"/></a></aside>
+        </h3>
+        <p>the 3 directions in the direction on the cone that will be checked
+turfs that are checked whether the cone can continue further from them</p><h3 id="proc/jatum_deserialize"><aside class="declaration">proc </aside>jatum_deserialize<aside>(json) 
+        
+    
+            <a href="https://github.com/SExOMC13/SExO-MC13/blob/3dc84d60f200616e861e18a22717ca0dae88d56f/code/__HELPERS/jatum.dm#L141">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;jatum.dm 141"/></a></aside>
+        </h3>
+        <p>Attempt to create a value from a JATUN JSON.</p>
+<ul>
+<li>json - The JSON to deserialize.</li>
+</ul><h3 id="proc/jatum_serialize"><aside class="declaration">proc </aside>jatum_serialize<aside>(value) 
+        
+    
+            <a href="https://github.com/SExOMC13/SExO-MC13/blob/3dc84d60f200616e861e18a22717ca0dae88d56f/code/__HELPERS/jatum.dm#L17">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;jatum.dm 17"/></a></aside>
+        </h3>
+        <p>Attempt to serialize a given value to the JATUM format.</p>
+<ul>
+<li>value - The var to serialize.</li>
+</ul><h3 id="proc/log_tgui"><aside class="declaration">proc </aside>log_tgui<aside>(user, message, context, /<a href="datum.html">datum</a>/tgui_window/window, /<a href="datum.html">datum</a>/src_object) 
+        
+    
+            <a href="https://github.com/SExOMC13/SExO-MC13/blob/3dc84d60f200616e861e18a22717ca0dae88d56f/code/__HELPERS/_logging.dm#L207">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;_logging.dm 207"/></a></aside>
+        </h3>
+        <p>Appends a tgui-related log entry. All arguments are optional.</p><h3 id="proc/make_datum_references_lists"><aside class="declaration">proc </aside>make_datum_references_lists<aside>() 
+        
+    
+            <a href="https://github.com/SExOMC13/SExO-MC13/blob/3dc84d60f200616e861e18a22717ca0dae88d56f/code/__HELPERS/global_lists.dm#L17">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;global_lists.dm 17"/></a></aside>
+        </h3>
+        <p>Initial Building</p><h3 id="proc/md5asfile"><aside class="declaration">proc </aside>md5asfile<aside>(file) 
+        
+    
+            <a href="https://github.com/SExOMC13/SExO-MC13/blob/3dc84d60f200616e861e18a22717ca0dae88d56f/code/__HELPERS/files.dm#L81">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;files.dm 81"/></a></aside>
+        </h3>
+        <p>Save file as an external file then md5 it.
+Used because md5ing files stored in the rsc sometimes gives incorrect md5 results.</p><h3 id="proc/md5filepath"><aside class="declaration">proc </aside>md5filepath<aside>(path) 
+        
+    
+            <a href="https://github.com/SExOMC13/SExO-MC13/blob/3dc84d60f200616e861e18a22717ca0dae88d56f/code/__HELPERS/files.dm#L76">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;files.dm 76"/></a></aside>
+        </h3>
+        <p>Returns the md5 of a file at a given path.</p><h3 id="proc/sanitize_is_full_emote_list"><aside class="declaration">proc </aside>sanitize_is_full_emote_list<aside>(value) 
+        
+    
+            <a href="https://github.com/SExOMC13/SExO-MC13/blob/3dc84d60f200616e861e18a22717ca0dae88d56f/code/__HELPERS/sanitize_values.dm#L23">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;sanitize_values.dm 23"/></a></aside>
+        </h3>
+        <p>Sanitize the custom emote list</p><h3 id="proc/send2adminchat"><aside class="declaration">proc </aside>send2adminchat<aside>(category, message) 
+        
+    
+            <a href="https://github.com/SExOMC13/SExO-MC13/blob/3dc84d60f200616e861e18a22717ca0dae88d56f/code/__HELPERS/chat.dm#L69">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;chat.dm 69"/></a></aside>
+        </h3>
+        <p>Sends a message to TGS admin chat channels.</p>
+<p>category - The category of the mssage.
+message - The message to send.</p><h3 id="proc/send2chat"><aside class="declaration">proc </aside>send2chat<aside>(message, channel_tag) 
+        
+    
+            <a href="https://github.com/SExOMC13/SExO-MC13/blob/3dc84d60f200616e861e18a22717ca0dae88d56f/code/__HELPERS/chat.dm#L44">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;chat.dm 44"/></a></aside>
+        </h3>
+        <p>Sends a message to TGS chat channels.</p>
+<p>message - The message to send.
+channel_tag - Required. If &quot;&quot;, the message with be sent to all connected (Game-type for TGS3) channels. Otherwise, it will be sent to TGS4 channels with that tag (Delimited by ','s).</p><h3 id="proc/url2htmlloader"><aside class="declaration">proc </aside>url2htmlloader<aside>(url) 
+        
+    
+            <a href="https://github.com/SExOMC13/SExO-MC13/blob/3dc84d60f200616e861e18a22717ca0dae88d56f/code/__HELPERS/type2type.dm#L381">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;type2type.dm 381"/></a></aside>
+        </h3>
+        <p>Return html to load a url.
+for use inside of browse() calls to html assets that might be loaded on a cdn.</p></main>
+<footer>
+    tgmc.dme
+    <a href="https://github.com/SExOMC13/SExO-MC13/tree/3dc84d60f200616e861e18a22717ca0dae88d56f">3dc84d6</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.4.0</a></footer>
+</body>
+</html>
